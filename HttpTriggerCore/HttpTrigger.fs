@@ -6,9 +6,8 @@ open Microsoft.AspNetCore.Http
 open Microsoft.Azure.WebJobs.Host
 open System.Linq
 
-[<AbstractClass; Sealed>]
-type HttpTrigger private () =
-  static member Run(req: HttpRequest, log: TraceWriter) =
+module HttpTrigger =
+  let Run(req: HttpRequest, log: TraceWriter) =
     log.Info("F# HTTP trigger function processed a request.")
 
     let found, value = req.Query.TryGetValue "name"
