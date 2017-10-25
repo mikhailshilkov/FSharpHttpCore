@@ -17,14 +17,19 @@ or just execute `run` command from Visual Studio Code.
 ## Simple HTTP
 
 Minimal example of HTTP Trigger in F#
+
 Sample URL: http://localhost:7071/api/simple?name=User
+
 Response: `Hi, User`
 
 ## Suave HTTP
 
 Example using [Suave](https://suave.io/) F#-friendly web library
+
 Sample URL: http://localhost:7071/api/suave/goodbye
+
 Response: `Good bye GET`
+
 Based on [Tamizhvendan](https://github.com/tamizhvendan)'s [`Suave.Azure.Functions`](https://github.com/tamizhvendan/Suave.Azure.Functions)
 
 ## Other Links
