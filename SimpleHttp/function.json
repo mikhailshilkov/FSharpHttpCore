@@ -2,13 +2,12 @@
   "bindings": [
     {
       "type": "httpTrigger",
-      "methods": [
-        "GET"
-      ],
+      "methods": ["get"],
       "authLevel": "anonymous",
-      "name": "req"
+      "name": "req",
+      "route": "simple"
     }
   ],
   "scriptFile": "../HttpTriggerCore.dll",
-  "entryPoint": "HttpTriggerCore.HttpTrigger.Run"
+  "entryPoint": "HttpTriggerCore.SimpleHttp.run"
 }

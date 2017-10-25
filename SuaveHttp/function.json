@@ -1,0 +1,13 @@
+﻿{
+  "bindings": [
+    {
+      "type": "httpTrigger",
+      "methods": ["get"],
+      "authLevel": "anonymous",
+      "name": "req",
+      "route": "suave/{*anything}"
+    }
+  ],
+  "scriptFile": "../HttpTriggerCore.dll",
+  "entryPoint": "HttpTriggerCore.SuaveHttp.run"
+}

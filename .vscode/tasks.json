@@ -7,11 +7,28 @@
       "taskName": "build",
       "command": "dotnet build",
       "type": "shell",
-      "group": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
       "presentation": {
         "reveal": "silent"
       },
       "problemMatcher": "$msCompile"
+    },
+    {
+      "taskName": "publish",
+      "command": "dotnet publish",
+      "dependsOn": "build",
+      "type": "shell",
+      "problemMatcher": []
+    },
+    {
+      "taskName": "run",
+      "command": "cd bin\\debug\\netstandard2.0\\publish ; func host start",
+      "dependsOn": "publish",
+      "type": "shell",
+      "problemMatcher": []
     }
   ]
 }

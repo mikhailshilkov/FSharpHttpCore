@@ -7,17 +7,25 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.0.0" />
     <PackageReference Include="Microsoft.Azure.WebJobs" Version="3.0.0-beta3" />
+    <PackageReference Include="Suave" Version="2.2.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="HttpTrigger.fs" />
+    <Compile Include="SimpleHttp\SimpleHttp.fs" />
+    <Compile Include="SuaveHttp\Adapter\Response.fs" />
+    <Compile Include="SuaveHttp\Adapter\Request.fs" />
+    <Compile Include="SuaveHttp\Adapter\Context.fs" />
+    <Compile Include="SuaveHttp\SuaveHttp.fs" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="host.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="HttpTriggerFSharp\function.json">
+    <Content Include="SimpleHttp\function.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SuaveHttp\function.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="local.settings.json">

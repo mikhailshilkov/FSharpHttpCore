@@ -1,13 +1,13 @@
 namespace HttpTriggerCore
 
+open System.Linq
 open Microsoft.AspNetCore.Mvc
-open Microsoft.Extensions.Primitives
 open Microsoft.AspNetCore.Http
 open Microsoft.Azure.WebJobs.Host
-open System.Linq
 
-module HttpTrigger =
-  let Run(req: HttpRequest, log: TraceWriter) =
+module SimpleHttp =
+
+  let run(req: HttpRequest, log: TraceWriter) =
     log.Info("F# HTTP trigger function processed a request.")
 
     let found, value = req.Query.TryGetValue "name"
